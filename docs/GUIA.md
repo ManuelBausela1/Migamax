@@ -50,4 +50,4 @@ git push -u origin main
 Usá el formato `tipo: descripción breve` en cada commit. Los tipos más útiles acá son `feat` (función nueva), `fix` (corrección), `style` (cambio visual), `refactor` (reorganización interna), `docs` (documentación) y `chore` (configuración o mantenimiento). Por ejemplo: `fix: corregir el panel de pedido en mobile`.
 Después del primer envío, alcanza con `git push`.
 
-El archivo `.env.example` muestra las variables disponibles. Los `.env` con valores reales quedan fuera de Git. Las variables `VITE_` se incluyen en la web pública al compilar, así que no guardes secretos ahí.
+Los archivos `.env` quedan fuera de Git. Las variables `VITE_` se incluyen en la web pública al compilar, así que no guardes secretos ahí.
