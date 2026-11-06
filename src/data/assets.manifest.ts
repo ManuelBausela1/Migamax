@@ -1,0 +1,32 @@
+export const assets = Object.fromEntries(
+  [
+    "marca-logo",
+    "marca-favicon",
+    "inicio-hero",
+    "inicio-catering",
+    "familia-equipo",
+    "familia-elaboracion",
+    "familia-presentacion",
+    "catering-hero",
+    "catering-sandwiches",
+    "catering-pizzetines",
+    "comercios-presentaciones",
+    "contacto-mapa",
+    "social-preview",
+    "categoria-clasicos",
+    "categoria-bandejas",
+    "categoria-especialidades",
+    ...Array.from({ length: 6 }, (_, i) => "producto-demo-" + i),
+  ].map((key) => [
+    key,
+    {
+      ruta: null as string | null,
+      alt: "",
+      estado: "pendiente",
+      autor: null,
+      licencia: null,
+      aprobacion: null,
+      puntoFocal: "center",
+    },
+  ]),
+);

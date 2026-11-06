@@ -1,0 +1,114 @@
+/* Los trazos son decorativos: no reemplazan el texto ni participan del nombre accesible. */
+.home-category,
+.product-card,
+.contact-cards article,
+.form-layout form,
+.review-items,
+.summary,
+.home-catering,
+.home-commerce {
+  box-shadow: var(--shadow-card);
+}
+.home-category {
+  transition: border-color 160ms, box-shadow 160ms;
+}
+@media (hover: hover) {
+  .home-category:hover,
+  .product-card:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+}
+dialog {
+  box-shadow: var(--shadow-panel);
+}
+.titulo-trazo {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+  padding-bottom: .12em;
+  margin-bottom: .12em;
+}
+.titulo-trazo > svg {
+  position: absolute;
+  width: 92%;
+  height: .45em;
+  left: 4%;
+  bottom: -.13em;
+  overflow: visible;
+  pointer-events: none;
+  transform: rotate(-2deg);
+}
+.titulo-trazo path {
+  fill: var(--color-brand-red);
+}
+.palabra-trazada {
+  white-space: nowrap;
+}
+.palabra-trazada .titulo-trazo > svg {
+  left: 0;
+  width: 100%;
+}
+.site-content > .container,
+.site-content > section > .container {
+  width: min(1120px, calc(100% - 64px));
+  max-width: 1120px;
+}
+.site-content > .section { padding-block: 40px 48px; }
+.site-content .editorial-hero {
+  gap: 48px;
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+.editorial-hero h1 { font-size: clamp(2.5rem, 4vw, 3.5rem); }
+.family-hero h1 { font-size: clamp(2rem, 3vw, 2.75rem); }
+.editorial-hero .lead { font-size: 1.1rem; }
+.editorial-hero .imagen { border-radius: 12px; }
+.site-content > section .btn { border-radius: 9px; }
+.site-content .form-layout { gap: 48px; }
+.site-content .form-layout form { padding: 24px; }
+.site-content .form-layout h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); }
+.catalog-page .functional { margin-bottom: 12px; }
+.catalog-page .catalog-controls { margin-top: 24px; }
+.catalog-page .product-grid { gap: 20px; }
+.catalog-page .product-card .imagen { aspect-ratio: 1.65; }
+.catalog-page .product-body { padding: 18px 20px; }
+.catalog-page .product-body h2 { margin-top: 8px; margin-bottom: 8px; }
+.catalog-page .product-body p { margin-bottom: 8px; }
+.pedido-page .review-grid { grid-template-columns: minmax(0, 1.8fr) minmax(290px, 1fr); gap: 24px; }
+.pedido-page .functional { margin-bottom: 8px; }
+.pedido-page .lead { font-size: 1.05rem; }
+.pedido-page .linea { grid-template-columns: 96px minmax(0, 1fr) auto auto; padding-block: 16px; gap: 16px; }
+.pedido-page .linea-imagen .imagen { aspect-ratio: 1.45; }
+.pedido-page .linea h3 { font-size: 1.2rem; }
+.pedido-page .quitar-linea { color: var(--color-brand-red); margin: 0; font-size: .8rem; }
+.pedido-page .cantidad { border-radius: 5px; }
+.pedido-page .cantidad output { min-width: 24px; }
+.pedido-page .review-items { padding-inline: 16px; }
+.pedido-page .review-items label { margin-top: 8px; padding: 12px; }
+.pedido-page .summary { border-radius: 10px; padding: 20px; background: #ffffff70; }
+.pedido-page .summary h2 { padding-bottom: 12px; border-bottom: 1px solid var(--color-border); }
+.pedido-page .summary p { margin-bottom: 10px; }
+.pedido-page .pasos-pedido { margin-top: 24px; }
+.drawer .linea { grid-template-columns: 64px minmax(0, 1fr); gap: 12px; padding-block: 16px; }
+.drawer .quitar-linea { grid-column: 2; justify-self: start; margin: 0; color: var(--color-brand-red); }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .pedido-page .review-grid { grid-template-columns: 1fr; }
+  .pedido-page .summary { position: static; }
+}
+@media (max-width: 767px) {
+  .site-content > .container,
+  .site-content > section > .container { width: calc(100% - 40px); }
+  .site-content > .section { padding-block: 28px 36px; }
+  .site-content .editorial-hero { grid-template-columns: 1fr; gap: 24px; }
+  .site-content .form-layout { grid-template-columns: 1fr; gap: 24px; }
+  .editorial-hero h1 { font-size: 2.5rem; }
+  .catalog-page .product-card .imagen { aspect-ratio: 1; }
+  .catalog-page .product-body { padding: 0; }
+  .pedido-page .review-grid { grid-template-columns: 1fr; }
+  .pedido-page .linea { grid-template-columns: 64px minmax(0, 1fr); gap: 12px; }
+  .pedido-page .linea-imagen .imagen { aspect-ratio: 1; }
+  .pedido-page .linea .cantidad { grid-column: 2; justify-self: start; }
+  .pedido-page .quitar-linea { grid-column: 2; justify-self: start; }
+  .pedido-page .summary { position: static; }
+  .pedido-page .linea h3 { font-size: 1.1rem; }
+}
